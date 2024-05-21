@@ -47,3 +47,25 @@ let authenticationStatus = isAuthenticated
   ? "Authenticated"
   : "Not authenticated";
 console.log("Authentication Status:", authenticationStatus);
+
+let assignedRole = "Employee";
+let assignedBenifits;
+
+switch (assignedRole) {
+  case "Employee":
+    assignedBenifits = "authorized to have access to Dietary Services";
+    break;
+  case "Enrolled Member":
+    assignedBenifits =
+      "authorized to have access to Dietary Services and one-on-one interaction with a dietician.";
+    break;
+  case "Subscriber":
+    assignedBenifits =
+      "authorized to have partial access to facilitate Dietary Services only.";
+    break;
+  default:
+    assignedBenifits =
+      "not authorized, please enroll or at least subscribe first to avail this facility";
+}
+
+console.log("You are " + assignedBenifits);

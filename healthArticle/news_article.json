@@ -1,0 +1,31 @@
+{
+  "news": [
+    {
+      "test1": "Test1 text",
+      "test2": "Test2 text",
+      "test3": [
+        "this is Test3 array text1",
+        "this is Test3 array text1",
+        "this is Test3 array text1"
+      ]
+    },
+    {
+      "test1": "Test1.2 text",
+      "test2": "Test2.2 text",
+      "test3": [
+        "this is Test3.2 array text1",
+        "this is Test3.2 array text1",
+        "this is Test3.2 array text1"
+      ]
+    },
+    {
+      "test1": "Test1.3 text",
+      "test2": "Test2.3 text",
+      "test3": [
+        "this is Test3.3 array text1",
+        "this is Test3.3 array text1",
+        "this is Test3.3 array text1"
+      ]
+    }
+  ]
+}

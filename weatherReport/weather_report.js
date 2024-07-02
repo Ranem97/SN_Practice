@@ -18,6 +18,23 @@ function showweatherDetails(event) {
     });
 }
 
+function showWeather(event) {
+  event.preventDefault();
+  const lat = document.getElementById("lat").value;
+  const lon = document.getElementById("lon").value;
+  const apiKey = "34a9a08ab713115dbb83fe5100abe64f";
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      const weatherInfo = document.getElementById("weatherInfo");
+      weatherInfo.innerHTML = `<h2>The Weather for Lon:${lon} and Lat:${lat} is: ${data.main.temp} &#8451;</h2>
+      <p>The City is: ${data.name}</p>`;
+    });
+}
+
 document
   .getElementById("weatherForm")
   .addEventListener("submit", showweatherDetails);
+
+document.getElementById("weatherForm2").addEventListener("submit", showWeather);
